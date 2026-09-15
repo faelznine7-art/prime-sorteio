@@ -5,7 +5,7 @@ from functools import wraps
 from flask import Flask, render_template, request, redirect, url_for, session, flash, send_file, abort
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("SECRET_KEY", "troque-esta-chave-em-producao")
+app.secret_key = os.environ.get("SECRET_KEY")
 DB = os.environ.get("DATABASE_PATH", "cadastros.db")
 ADMIN_PASSWORD = os.environ["ADMIN_PASSWORD"]
 
